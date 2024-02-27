@@ -1,17 +1,8 @@
 package org.example.lesson_1
 
 fun main () {
-    val year = 1961
-    var hour: String = "09"
-    var minute: String = "07"
+    var numberOfOrders = 75
+    var notificationText = "<Благодарим за покупку и выбор нашего интернет-магазина"
 
-    println(year)
-    // println(hour)
-    // println(minute)
-
-    var time = "$hour:$minute"
-
-    println(time)
-
+    println(notificationText)
 }
-
