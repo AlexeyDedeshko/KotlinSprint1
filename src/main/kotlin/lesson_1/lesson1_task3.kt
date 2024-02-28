@@ -5,4 +5,5 @@ fun main () {
     var notificationText = "<Благодарим за покупку и выбор нашего интернет-магазина"
 
     println(notificationText)
+
 }
