@@ -11,7 +11,6 @@ fun main () {
 
     var time = "$hour:$minute"
 
-    // println(hourAndMinute)
     println(time)
 
 }
