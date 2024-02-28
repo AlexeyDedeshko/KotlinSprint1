@@ -1,15 +1,26 @@
-package org.example.lesson_1
+package lesson_1
 
 fun main() {
-    // var second: Int = 6480
-    // var minute: Int = 108
-    // var hour: Int = 2
+    val totalSeconds = 6480
+    var hours = 1
+    var minutes = 48
+    var remainingSeconds = 0
 
-    var hour: Int = 1
-    var minute: Int = 48
-    var second: String = "00"
+    val secondsPerMinute = 60
+    val secondsPerHour = secondsPerMinute * 60
 
-    var notificationText = "01:48:00"
-    println(notificationText)
+    // Делим общее количество секунд на количество секунд в часе и минуте
+    hours = totalSeconds / secondsPerHour
+    minutes = (totalSeconds % secondsPerHour) / secondsPerMinute
 
+    // Определяем остаток секунд
+    remainingSeconds = totalSeconds % secondsPerMinute
+
+    // Форматируем секунды с двумя чифрами
+    val formattedHours = hours.toString().padStart(2, '0')
+
+    // Форматируем секунды с двумя нулями
+    val formattedRemainingSecond = remainingSeconds.toString().padStart(2, '0')
+
+    println("$formattedHours:$minutes:$formattedRemainingSecond")
 }
