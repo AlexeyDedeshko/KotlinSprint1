@@ -1,7 +1,17 @@
 package org.example.lesson_1
 
 fun main () {
-    println("Тестовое решение к уроку 1 задаче 1")
-    println("какие то доработки")
+    val year = 1961
+    var hour: String = "09"
+    var minute: String = "07"
+
+    println(year)
+    // println(hour)
+    // println(minute)
+
+    var time = "$hour:$minute"
+
+    println(time)
+
 }
 
