@@ -1,12 +1,14 @@
 package org.example.lesson_2
-fun main () {
 
-    val a: Double = 3.00
-    val b: Double = 4.00
-    val c: Double = 3.00
-    val d: Double = 5.00
+fun main() {
 
-    println((a+b+c+d)/4)
+    val aAssesment: Double = 3.00
+    val bAssesment: Double = 4.00
+    val cAssesment: Double = 3.00
+    val dAssesment: Double = 5.00
+
+    val amountOfStud = 4
+    println((aAssesment + bAssesment + cAssesment + dAssesment) / amountOfStud)
 
     /*
     Задача состояла в том чтобы вывести два знака после запятой.
