@@ -6,7 +6,6 @@ fun main() {
     val bAssesment: Double = 4.00
     val cAssesment: Double = 3.00
     val dAssesment: Double = 5.00
-
     val amountOfStud = 4
     println((aAssesment + bAssesment + cAssesment + dAssesment) / amountOfStud)
 
