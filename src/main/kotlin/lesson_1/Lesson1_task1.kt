@@ -1,9 +1,9 @@
 package org.example.lesson_1
 
-fun main () {
-    var numberOfOrders = 75
-    var notificationText = "<Благодарим за покупку и выбор нашего интернет-магазина"
+fun main() {
+    val numberOfOrders = 75
+    val notificationText = "<Благодарим за покупку и выбор нашего интернет-магазина"
 
 
-println(notificationText)
+    println(notificationText)
 }
