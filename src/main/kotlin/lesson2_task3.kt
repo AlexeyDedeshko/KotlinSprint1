@@ -7,7 +7,7 @@ fun main() {
     val minInHour = 60
 
     // Получаем минуты отбытия
-    val exitTimeToMin = 9 * 60 + 39
+    val exitTimeToMin = exitHour * minInHour + exitMin
     // Складываем минуты отбытия с минутами в пути
     val exitPlusWay = exitTimeToMin + onTheWay
 
