@@ -1,17 +1,17 @@
 package lesson_3
 
 fun main() {
-    val nameMiss = "Андреева Татьяна Сергеевна"
-    val nameMissis = "Сидорова Татьяна Сергеевна"
-    val ageMiss = 20
-    val ageMissis = 22
-    val space = ' '
+    val nameMiss = "Татьяна"
+    var sernameMiss = "Андреева"
+    val patronymicMiss = "Сергеевна"
 
-    // Вариант с конкантенацией
-    println(nameMiss + "," + space + ageMiss)
-    println(nameMissis + "," + space + ageMissis)
+    sernameMiss = "Сидорова"
 
-    // Вариант с интерполяцией
-    println("$nameMiss, $ageMiss")
-    println("$nameMissis, $ageMissis")
+
+    var ageMiss = 20
+    ageMiss = 22
+
+    println("$nameMiss $patronymicMiss ${run {sernameMiss}}, ${run {ageMiss}}")
+    println("$nameMiss $patronymicMiss $sernameMiss, $ageMiss")
+
 }
