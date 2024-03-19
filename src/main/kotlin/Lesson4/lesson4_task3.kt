@@ -2,22 +2,21 @@ package Lesson4
 
 fun main() {
 
-    // Критерии благоприятных условий
-    val wether = "sunny"
-    val tent = "open"
-    val humidity = 20
-    val season: String = "не зима"
-
     // Текущие условия
-    val weatherToday = "sunny"
-    val tentToday = "open"
+    val weatherToday: Boolean = "sunny"
+    val tentToday: Boolean = "open"
     val humidityToday = 20
     val currentSeason: String = "зима"
 
-    println( currentSeason === season && tentToday === tent && humidityToday === humidity && weatherToday === wether )
+    println(currentSeason == SEASON && tentToday == IS_AWNING_OPEN && humidityToday == HUMIDITY
+            && weatherToday == IS_SUNNY)
 
 }
-
+    // Критерии благоприятных условий
+    const val IS_SUNNY: Boolean = "sunny"
+    const val IS_AWNING_OPEN: Boolean = "open"
+    const val HUMIDITY: Int = 20
+    const val SEASON: String = "не зима"
 /*
 На территории агрокомплекса функционирует система автоматического мониторинга условий для роста растений. Напиши программу,
 которая будет определять, подходят ли текущие условия для успешного роста бобовых культур.
