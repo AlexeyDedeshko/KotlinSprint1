@@ -2,7 +2,20 @@ package Lesson4
 
 fun main() {
 
-    // определеяем четные и нечетные дни
+    // Определяем только четные дни
+    val day = 5
+    val rem = day % 2
+
+    val chet = rem == 1
+
+    val isEven: Boolean = chet
+
+    val hands = isEven != chet
+    val press = isEven != chet
+    val legs = chet
+    val back = chet
+
+    /* // определеяем четные и нечетные дни
     val day = 5
     val rem = day % 2
 
@@ -14,6 +27,7 @@ fun main() {
     val legs = chet
     val back = chet
 
+     */
     val stroke = "Упражнения для рук: $hands, Упражнения для пресса: $press, Упражнения для ног: $legs, Упражнения для спины: $back"
 
     val parts = stroke.split(",")
