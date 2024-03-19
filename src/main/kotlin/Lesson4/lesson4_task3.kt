@@ -3,18 +3,18 @@ package Lesson4
 fun main() {
 
     // Текущие условия
-    val weatherToday: Boolean = "sunny"
-    val tentToday: Boolean = "open"
+    val weatherToday: Boolean = "sunny" == IS_SUNNY
+    val tentToday: Boolean = "open" == IS_AWNING_OPEN
     val humidityToday = 20
     val currentSeason: String = "зима"
 
-    println(currentSeason == SEASON && tentToday == IS_AWNING_OPEN && humidityToday == HUMIDITY
-            && weatherToday == IS_SUNNY)
+    println(currentSeason == SEASON && tentToday && humidityToday == HUMIDITY
+            && weatherToday)
 
 }
     // Критерии благоприятных условий
-    const val IS_SUNNY: Boolean = "sunny"
-    const val IS_AWNING_OPEN: Boolean = "open"
+    const val IS_SUNNY = "sunny"
+    const val IS_AWNING_OPEN = "open"
     const val HUMIDITY: Int = 20
     const val SEASON: String = "не зима"
 /*
