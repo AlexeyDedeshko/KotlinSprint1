@@ -5,7 +5,7 @@ fun main() {
     val tablesToday = 0
     val tablesTmr = 4
 
-    println("Доступность столиков на сегодня: ${tablesToday <= 0}, " +
+    println("Доступность столиков на сегодня: ${tablesToday <= 0},\n"+
             "Доступность столиков на завтра: ${tablesTmr <= 0}")
 }
 
