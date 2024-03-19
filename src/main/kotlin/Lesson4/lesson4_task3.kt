@@ -3,13 +3,13 @@ package Lesson4
 fun main() {
 
     // Текущие условия
-    val weatherToday: Boolean = "sunny" == IS_SUNNY
+    val isWeatherSunny: Boolean = true
     val tentToday: Boolean = "open" == IS_AWNING_OPEN
     val humidityToday = 20
     val currentSeason: String = "зима"
 
     println(currentSeason == SEASON && tentToday && humidityToday == HUMIDITY
-            && weatherToday)
+            && isWeatherSunny == true)
 
 }
     // Критерии благоприятных условий
