@@ -1,9 +1,61 @@
 package Lesson5
 
-fun main () {
+fun main() {
+    val rnds1 = (0..42).random()
+    val rnds2 = (0..42).random()
+    val rnds3 = (0..42).random()
 
+    // создаем список рандомов
+    val evenNumbersRndm = listOf(rnds1, rnds2, rnds3)
 
+    // println(evenNumbersRndm) // вывожу для тестирования чтобы вводить рандом в список пользователя
 
+    println("Пожалуйста, введите ваши числа через Enter")
+
+    // Поочередно введенные пользователем числа должны также храниться в списке.
+
+    val userNumber1 = readln()!!.toInt()
+    val userNumber2 = readln()!!.toInt()
+    val userNumber3 = readln()!!.toInt()
+
+    val evenNumbersUser = listOf(userNumber1, userNumber2, userNumber3)
+
+    // сравниваем списки рандома и пользователя
+    // Для определения совпадений используй метод intersect () и сохрани размер полученной коллекции в отдельную переменную.
+
+    val commonElements = evenNumbersRndm.intersect(evenNumbersUser.toSet())
+
+    // Получаем размер списка
+    val listSize = commonElements.size
+    println(listSize) // 3
+
+    // В зависимости от количества угаданных чисел программа выводит результат:
+
+    // Если произошло 3 совпадения
+    // сообщается, что пользователь угадал все числа и выиграл джекпот.
+
+    /* if (listSize == 3) {
+        println("Пользователь угадал все числа и выиграл джекпот")
+    } else if (listSize == 2) {
+        println("Пользователь угадал два числа и получает крупный приз")
+    } else (listSize == 1) {
+        println("Пользователю выплачивается утешительный приз")
+    }
+
+    if (listSize == 0) {
+        println("Пользователь не угадал ни одного числа")
+
+     */
+
+    when(listSize) {
+        3 -> println("Пользователь угадал все числа и выиграл джекпот")
+        2 -> println("Пользователь угадал два числа и получает крупный приз")
+        1 -> println("Пользователю выплачивается утешительный приз")
+        0 -> println("Пользователь не угадал ни одного числа")
+
+    }
+    //В конце игры вне зависимости от результата программа выводит выигрышные числа.
+    println(evenNumbersRndm)
 }
 
 /*
