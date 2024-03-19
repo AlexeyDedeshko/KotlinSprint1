@@ -4,12 +4,12 @@ fun main() {
 
     // Текущие условия
     val isWeatherSunny: Boolean = true
-    val tentToday: Boolean = "open" == IS_AWNING_OPEN
+    val isTentOpen: Boolean = true
     val humidityToday = 20
     val currentSeason: String = "зима"
 
-    println(currentSeason == SEASON && tentToday && humidityToday == HUMIDITY
-            && isWeatherSunny == true)
+    println(currentSeason == SEASON && isTentOpen && humidityToday == HUMIDITY
+            && isWeatherSunny)
 
 }
     // Критерии благоприятных условий
