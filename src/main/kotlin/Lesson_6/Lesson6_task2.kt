@@ -1,31 +1,28 @@
 package Lesson_6
 
+kotlin
 import java.util.*
 
 fun main() {
+    val scanner = Scanner(System.in)
 
-    var scanner: String? = readLine()
-    print("Введите количество секунд для засечки: ")
-    val seconds = scanner
+    // Запрашиваем у пользователя количество секунд
+    print("Введите количество секунд для таймера: ")
+    val seconds = scanner.nextInt()
 
-    // Создание объекта Timer
+    // Создаем объект таймера
     val timer = Timer()
 
-// Определение действия, выполняемого по истечении заданного времени
-timer.schedule(object : TimerTask() {
-    override fun run() {
-        println("Прошло $scanner секунд")
-        timer.cancel() // Остановка таймера
-    }
-    scanner * 1000L) // Перевод секунд в миллисекунд и задержка выполнения
-}
-    // Пауза программы
-    try {
-        Thread.sleep(seconds * 1000L)
-    } catch (e: InterruptedException) {
-        e.printStackTrace()
-    }
+    // Запускаем таймер на указанное количество секунд
+    timer.schedule(object : TimerTask() {
+        override fun run() {
+            // Выводим сообщение по истечении времени
+            println("Прошло $seconds секунд")
+        }
+    }, seconds * 1000L) // Умножаем на 1000, чтобы получить миллисекунды
 
+    // Останавливаем программу на паузу
+    scanner.nextLine()
 }
 
 /*
