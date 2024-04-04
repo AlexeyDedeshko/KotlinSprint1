@@ -2,28 +2,54 @@ package Lesson_6
 
 fun main() {
 
-    // регистрация
-    println("Создайте логин")
-    val createLogin = readLine()
-    println("Создайте пароль")
-    val createPassword = readLine()
-    println("Вы создали логин и пароль")
-    println("Введите логин и пароль для авторизации")
+    // Создаем функцию для регистрации и авторизации пользователя
+    fun registerAndLogin() {
+        var login: String? = null
+        var password: String? = null
 
-    println("Введите логин")
-    val login = readLine()
-    println("Введите пароль")
-    val password = readLine()
+        // Блок программы для создания логина и пароля
+        println("Создайте логин и пароль")
+        while (login == null || login.isEmpty()) {
+            print("Введите логин: ")
+            login = readLine()?.trim()
+            if (login.isNullOrEmpty()) {
+                println("Логин не может быть пустым")
+            }
+        }
 
-    // повторяем цикл пока вводится не верно
-    while (createLogin != login) {
-        println("Логин и/или пароль не верны, повторите попытку")
+        while (password == null || password.isEmpty()) {
+            print("Введите пароль: ")
+            password = readLine()?.trim()
+            if (password.isNullOrEmpty()) {
+                println("Пароль не может быть пустым")
+            }
+        }
+
+        // Блок программы для авторизации пользователя
+        println("Авторизация")
+        var inputLogin: String? = null
+        var inputPassword: String? = null
+
+        while (inputLogin != login || inputPassword != password) {
+            print("Введите логин: ")
+            inputLogin = readLine()?.trim()
+            print("Введите пароль: ")
+            inputPassword = readLine()?.trim()
+
+            if (inputLogin != login || inputPassword != password) {
+                println("Логин или пароль неверны. Попробуйте еще раз.")
+            }
+        }
+
+        // Вывод сообщения об успешной авторизации
+        println("Авторизация прошла успешно")
     }
 
-    if (createLogin = login)
-    println("Авторизация прошла успешно”)
+// Вызываем функцию для регистрации и авторизации пользователя
+    registerAndLogin()
+
 }
-}
+
 
 /*
 На этапе авторизации в приложении пользователь, не имея аккаунта, выбрал регистрацию. Нужно создать блок программы,
