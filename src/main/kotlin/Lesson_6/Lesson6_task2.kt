@@ -1,10 +1,9 @@
 package Lesson_6
 
-kotlin
 import java.util.*
 
 fun main() {
-    val scanner = Scanner(System.in)
+    val scanner = Scanner(System.`in`)
 
     // Запрашиваем у пользователя количество секунд
     print("Введите количество секунд для таймера: ")
@@ -23,6 +22,7 @@ fun main() {
 
     // Останавливаем программу на паузу
     scanner.nextLine()
+
 }
 
 /*
