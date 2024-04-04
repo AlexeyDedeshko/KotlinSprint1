@@ -2,10 +2,6 @@ package Lesson4
 
 fun main() {
 
-    val weightFrom = 35
-    val weightTo = 100
-    val volumeLit = 100
-
     val cargo1Weight = 20
     val cargo1Volume = 80
 
@@ -17,8 +13,11 @@ fun main() {
     // && gruz1Volume < volumeLit
 
     println("Груз с весом $cargo1Weight и объемом $cargo1Volume соответствует категории 'Average': " +
-            "${cargo1Weight > weightFrom && cargo1Weight <= weightTo && cargo1Volume < volumeLit}")
+            "${cargo1Weight > WEIGHT_FROM && cargo1Weight <= WEIGHT_TO && cargo1Volume < VOLUNE_LIT}")
     println("Груз с весом $cargo2Weight и объемом $cargo2Volume соответствует категории 'Average': " +
-            "${cargo2Weight > weightFrom && cargo2Weight <= weightTo && cargo2Volume < volumeLit}")
+            "${cargo2Weight > WEIGHT_FROM && cargo2Weight <= WEIGHT_TO && cargo2Volume < VOLUNE_LIT}")
 
 }
+const val WEIGHT_FROM = 35
+const val WEIGHT_TO = 100
+const val VOLUNE_LIT = 100
