@@ -2,33 +2,16 @@ package Lesson4
 
 fun main() {
 
-    // Определяем только четные дни
     val day = 5
-    val rem = day % 2
+    // Определяем четные и не четные дни
+    val isEven: Boolean = day % 2 == 0
 
-    val chet = rem == 1
+    // Применяем флаг к переменной
+    val hands = isEven
+    val legs = !isEven
 
-    val isEven: Boolean = chet
-
-    val hands = isEven != chet
-    val press = isEven != chet
-    val legs = chet
-    val back = chet
-
-    /* // определеяем четные и нечетные дни
-    val day = 5
-    val rem = day % 2
-
-    val chet = rem == 1
-    val neChet = rem == 0
-
-    val hands = neChet
-    val press = neChet
-    val legs = chet
-    val back = chet
-
-     */
-    val stroke = "Упражнения для рук: $hands, Упражнения для пресса: $press, Упражнения для ног: $legs, Упражнения для спины: $back"
+    // Выводим результат в консоль
+    val stroke = "Упражнения для рук: $hands, Упражнения для пресса: $hands, Упражнения для ног: $legs, Упражнения для спины: $legs"
 
     val parts = stroke.split(",")
     val part1 = parts[0]
