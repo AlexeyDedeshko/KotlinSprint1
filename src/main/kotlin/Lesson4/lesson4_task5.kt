@@ -3,19 +3,15 @@ package Lesson4
 import java.util.Scanner
 fun main() {
 
-    // условия долгосрочного плавания
-    val cond1 = "корабль не имеет повреждений"
-    val cond21Crew = 55 //"число экипажа составляет от 55 до 70 человек (включительно)"
-    val cond22Crew = 70 //"число экипажа составляет от 55 до 70 человек (включительно)"
-    val cond3 = 50
-    val cond41Blag = "погода благоприятная"
-    val cond41NeBlag = "погода неблагоприятная"
-
     // текущие условия
-    val damageOfHousing = readLine() //"корабль не имеет повреждений"
-    val currentCrew: Scanner = Scanner(System.`in`) //60
-    val provisionOnBoard: Scanner = Scanner(System.`in`) //51
-    val weatherCond = readLine() //"погода благоприятная"
+    println("Корабль имеет повреждения? (да/нет)")
+    val damageOfHousing = readLine() ?: "нет"
+    println("Текущее число экипажа:")
+    val currentCrew = readLine()?.toIntOrNull() ?: 0
+    println("Количество ящиков с провизией на борту:")
+    val provisionOnBoard = readLine()?.toIntOrNull() ?: 0
+    println("Погода благоприятная? (да/нет)")
+    val weatherCond = readLine() ?: "нет"
 
     // альтернативные условия (может так же отплыть есил соблюдаются следующие условия)
 
@@ -31,8 +27,8 @@ fun main() {
     val weatherCondAlt = "погода благоприятная"
 
     // строка расчета стандартных условий
-    val counting: Boolean = (cond1 == damageOfHousing) && (currentCrew in cond21Crew .. cond22Crew)
-            && (provisionOnBoard > cond3) && (weatherCond == cond41Blag) || (weatherCond == cond41NeBlag)
+    val counting: Boolean = (COND_1 == damageOfHousing) && (currentCrew in COND_21_CREW .. COND_22_CREW)
+            && (provisionOnBoard > COND_3) && (weatherCond == COND_41_BLAG) || (weatherCond == COND_41_NE_BLAG)
 
     // строка расчета альтернативных условий
     val countingAlt = (condAlternative1 == damageOfHousingAlt) && (currentCrewAlt == condAlternative2)
@@ -42,6 +38,14 @@ fun main() {
     println("Альтернативные условия: $countingAlt")
 
 }
+
+// условия долгосрочного плавания - константы
+const val COND_1 = "корабль не имеет повреждений"
+const val COND_21_CREW = 55 //"число экипажа составляет от 55 до 70 человек (включительно)"
+const val COND_22_CREW = 70 //"число экипажа составляет от 55 до 70 человек (включительно)"
+const val COND_3 = 50
+const val COND_41_BLAG = "погода благоприятная"
+const val COND_41_NE_BLAG = "погода неблагоприятная"
 
 /*
 Научно-исследовательский корабль может приступить к долгосрочному плаванию при выполнении следующих
