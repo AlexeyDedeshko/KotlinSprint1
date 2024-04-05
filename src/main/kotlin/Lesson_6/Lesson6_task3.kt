@@ -6,25 +6,18 @@ fun main() {
 
     // Запрашиваем у пользователя количество секунд
     print("Введите количество секунд для таймера: ")
-    val seconds = scanner.nextInt()
+    var seconds = scanner.nextInt()
 
-    // Создаем объект таймера
-    val timer = Timer()
 
-    // ДОБАВЛЯЕМ ОТСЧЕТ
+    // создаем отсчет таймера через while
+    while (seconds > 0) {
+        println("Осталось секунд: ${seconds--}")
+        Thread.sleep(1000)
 
-    // Запускаем таймер на указанное количество секунд
-    timer.schedule(object : TimerTask() {
-        override fun run() {
-            // Выводим сообщение по истечении времени
-            println("Прошло $seconds секунд")
+        if (seconds == 0) {
+            println("Время вышло")
         }
-    }, seconds * 1000L) // Умножаем на 1000, чтобы получить
-    // миллисекунды
-
-    // Останавливаем программу на паузу
-    scanner.nextLine()
-
+    }
 }
 
 /*
