@@ -1,5 +1,6 @@
 package Lesson4
 
+import java.util.Scanner
 fun main() {
 
     // условия долгосрочного плавания
@@ -11,10 +12,10 @@ fun main() {
     val cond41NeBlag = "погода неблагоприятная"
 
     // текущие условия
-    val damageOfHousing = "корабль не имеет повреждений"
-    val currentCrew = 60
-    val provisionOnBoard = 51
-    val weatherCond = "погода благоприятная"
+    val damageOfHousing = readLine() //"корабль не имеет повреждений"
+    val currentCrew: Scanner = Scanner(System.`in`) //60
+    val provisionOnBoard: Scanner = Scanner(System.`in`) //51
+    val weatherCond = readLine() //"погода благоприятная"
 
     // альтернативные условия (может так же отплыть есил соблюдаются следующие условия)
 
