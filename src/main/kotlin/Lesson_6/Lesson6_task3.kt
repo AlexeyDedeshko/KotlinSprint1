@@ -11,6 +11,8 @@ fun main() {
     // Создаем объект таймера
     val timer = Timer()
 
+    // ДОБАВЛЯЕМ ОТСЧЕТ
+
     // Запускаем таймер на указанное количество секунд
     timer.schedule(object : TimerTask() {
         override fun run() {
