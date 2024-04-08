@@ -6,7 +6,7 @@ fun main() {
     val isWeatherSunny: Boolean = true
     val isTentOpen: Boolean = true
     val humidityToday = 20
-    val currentSeasonWinter: Boolean = true
+    val currentSeasonWinter: String = "winter"
 
     println(currentSeasonWinter == SEASON_WINTER && isTentOpen && humidityToday == HUMIDITY
             && isWeatherSunny)
@@ -16,7 +16,7 @@ fun main() {
     const val IS_SUNNY = true // "sunny"
     const val IS_AWNING_OPEN = true // "open"
     const val HUMIDITY: Int = 20
-    const val SEASON_WINTER: Boolean = false
+    const val SEASON_WINTER: String = "winter"
 /*
 На территории агрокомплекса функционирует система автоматического мониторинга условий для роста растений. Напиши программу,
 которая будет определять, подходят ли текущие условия для успешного роста бобовых культур.
