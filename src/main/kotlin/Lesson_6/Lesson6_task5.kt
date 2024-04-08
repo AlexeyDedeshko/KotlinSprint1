@@ -1,9 +1,8 @@
 package Lesson_6
 
-class Lesson6_task5 {
-}
+import java.lang.Math.random
 
-package Lesson_6
+class Lesson6_task5 {}
 
 fun main() {
 
@@ -28,41 +27,42 @@ fun main() {
             if (password.isNullOrEmpty()) {
                 println("Пароль не может быть пустым")
             }
-        }
+        } // закрыл функцию?
 
         // Блок программы для авторизации пользователя
         println("Авторизация")
         var inputLogin: String? = null
         var inputPassword: String? = null
-
-        while (inputLogin != login || inputPassword != password) {
-            print("Введите логин: ")
-            inputLogin = readLine()?.trim()
-            print("Введите пароль: ")
-            inputPassword = readLine()?.trim()
-
-            if (inputLogin != login || inputPassword != password) {
-                println("Логин или пароль неверны. Попробуйте еще раз.")
-            }
-        }
-
-        // Вывод сообщения об успешной авторизации
-        println("Авторизация прошла успешно")
     }
+    // пользователь доказывает, что он не бот
+    println("Докажите что вы не бот")
+    var attempts = 3
+    var isUserNotABot = false
 
-// Вызываем функцию для регистрации и авторизации пользователя
-    registerAndLogin()
+    while (attempts > 0 && !isUserNotABot) {
+        val randomNumber1 = (0..10).random()
+        val randomNumber2 = (0..10).random()
+        var correctAnswer = randomNumber1 + randomNumber2
 
+        println("Сколько будет $randomNumber1 + $randomNumber2?")
+        val userAnswer = readLine()?.trim()!!.toInt()
+
+        if (userAnswer == correctAnswer) {
+            println("Добро пожаловать!")
+            isUserNotABot = true
+        } else {
+            attempts--
+            println("У вас осталось $attempts попыток")
+
+        }
+    }
+    if (!isUserNotABot) {
+        println("Доступ запрещен.")
+        return
+
+    }
 }
 
-
-/*
-На этапе авторизации в приложении пользователь, не имея аккаунта, выбрал регистрацию. Нужно создать блок программы,
-который сначала предлагает создать логин и пароль, затем запрашивает их, чтобы войти в приложение.
-
-Если логин или пароль введены неверно – данные запрашиваются заново. Если данные верны, выводится сообщение –
-“Авторизация прошла успешно”.
- */
 /*
 
 Доработка задачи на авторизацию. Нужно написать часть модуля для авторизации пользователя. Для входа в приложение
@@ -74,4 +74,4 @@ fun main() {
 
 Для простоты ограничься примерами на сложение с использованием цифр от 1 до 9. Если три попытки оказались неудачными,
 вывести сообщение "Доступ запрещен".
- */
+*/
