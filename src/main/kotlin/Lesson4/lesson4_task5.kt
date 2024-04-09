@@ -5,34 +5,34 @@ fun main() {
 
     // текущие условия
     println("Корабль имеет повреждения? (да/нет)")
-    val damageOfHousing = readLine() ?: "нет"
+    val isDamageOfHousing = readLine() ?: false
     println("Текущее число экипажа:")
     val currentCrew = readLine()?.toIntOrNull() ?: 0
     println("Количество ящиков с провизией на борту:")
     val provisionOnBoard = readLine()?.toIntOrNull() ?: 0
     println("Погода благоприятная? (да/нет)")
-    val weatherCond = readLine() ?: "нет"
+    val isWeatherCond = readLine() ?: true
 
     // альтернативные условия (может так же отплыть есил соблюдаются следующие условия)
 
-    val condAlternative1 = "корабль имеет незначительные повреждения"
+    val isDamageCondAlternative1 = false
     val condAlternative2 = 70
-    val condAlternative3 = "погода благоприятная"
+    val isWeatherCondAlternative3 = true
     val condAlternative4 = 50
 
     // альтернативные условия
-    val damageOfHousingAlt = "корабль имеет незначительные повреждения"
+    val isDamageOfHousingAlt = false
     val currentCrewAlt = 70
     val provisionOnBoardAlt = 51
-    val weatherCondAlt = "погода благоприятная"
+    val isWeatherCondAlt = true
 
     // строка расчета стандартных условий
-    val counting: Boolean = (COND_1 == damageOfHousing) && (currentCrew in COND_21_CREW .. COND_22_CREW)
-            && (provisionOnBoard > COND_3) && (weatherCond == COND_41_BLAG) || (weatherCond == COND_41_NE_BLAG)
+    val counting: Boolean = (IS_DAMAGE == isDamageOfHousing) && (currentCrew in CREW_MINIMUM .. CREW_MAXIMUM)
+            && (provisionOnBoard > PROVISION) && (isWeatherCond == GOOD_WEATHER) || (isWeatherCond == BAD_WEATHER)
 
     // строка расчета альтернативных условий
-    val countingAlt = (condAlternative1 == damageOfHousingAlt) && (currentCrewAlt == condAlternative2)
-            && (provisionOnBoardAlt > condAlternative4) && (weatherCondAlt == condAlternative3)
+    val countingAlt = (isDamageCondAlternative1 == isDamageOfHousingAlt) && (currentCrewAlt == condAlternative2)
+            && (provisionOnBoardAlt > condAlternative4) && (isWeatherCondAlt == isWeatherCondAlternative3)
 
     println("Корабль может выходить в плавание: $counting")
     println("Корабль может выходить в плавание: $countingAlt")
@@ -40,12 +40,12 @@ fun main() {
 }
 
 // условия долгосрочного плавания - константы
-const val COND_1 = "корабль не имеет повреждений"
-const val COND_21_CREW = 55 //"число экипажа составляет от 55 до 70 человек (включительно)"
-const val COND_22_CREW = 70 //"число экипажа составляет от 55 до 70 человек (включительно)"
-const val COND_3 = 50
-const val COND_41_BLAG = "погода благоприятная"
-const val COND_41_NE_BLAG = "погода неблагоприятная"
+const val IS_DAMAGE = false
+const val CREW_MINIMUM = 55 //"число экипажа составляет от 55 до 70 человек (включительно)"
+const val CREW_MAXIMUM = 70 //"число экипажа составляет от 55 до 70 человек (включительно)"
+const val PROVISION = 50
+const val GOOD_WEATHER = true
+const val BAD_WEATHER = false
 
 /*
 Научно-исследовательский корабль может приступить к долгосрочному плаванию при выполнении следующих
