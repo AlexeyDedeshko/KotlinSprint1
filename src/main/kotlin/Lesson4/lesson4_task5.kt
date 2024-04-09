@@ -34,8 +34,8 @@ fun main() {
     val countingAlt = (condAlternative1 == damageOfHousingAlt) && (currentCrewAlt == condAlternative2)
             && (provisionOnBoardAlt > condAlternative4) && (weatherCondAlt == condAlternative3)
 
-    println("Ставндартные условия: $counting")
-    println("Альтернативные условия: $countingAlt")
+    println("Корабль может выходить в плавание: $counting")
+    println("Корабль может выходить в плавание: $countingAlt")
 
 }
 
