@@ -8,8 +8,8 @@ fun main() {
     val humidityToday = 20
     val currentSeasonWinter: String = "winter"
 
-    println(currentSeasonWinter == SEASON_WINTER && isTentOpen && humidityToday == HUMIDITY
-            && isWeatherSunny)
+    println(currentSeasonWinter != SEASON_WINTER && isTentOpen == IS_AWNING_OPEN && humidityToday == HUMIDITY
+            && isWeatherSunny == IS_SUNNY)
 
 }
     // Критерии благоприятных условий
