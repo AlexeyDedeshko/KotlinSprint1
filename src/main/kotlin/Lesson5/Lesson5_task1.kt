@@ -2,14 +2,16 @@ package Lesson5
 
 fun main() {
 
-    val task = 21 + 7
-    var userReply = readLine()!!.toInt()
+    val task = "21 + 7"
+    val taskResult = 21 + 7
+    println("Докажите, что вы не бот, решив математический пример $task")
+    val userReply = readLine()?.toIntOrNull()
 
-    if(userReply == task) {
+    if(userReply == taskResult) {
         println("Добро пожаловать!")
     }
 
-    if(userReply != task) {
+    if(userReply != taskResult) {
         println("Доступ запрещен!")
     }
 
