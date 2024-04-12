@@ -1,7 +1,8 @@
 package Lesson_7
+
 import kotlin.random.Random
 
-fun main () {
+fun main() {
     fun generatePassword(length: Int = 6): String {
         val letters = "abcdefghijklmnopqrstuvwxyz"
         val digits = "0123456789"
@@ -14,14 +15,13 @@ fun main () {
                 digits[Random.nextInt(digits.length)]
             }
         }
-
         return password
-        println("Сгенерированный пароль: $password")
-        println("Введите пароль для авторизации: ")
-        val userPassword = readLine()
-
     }
+    val password = generatePassword()
+    println("Сгенерированный пароль: $password")
+
 }
+
 /*
 Создай программу, которая генерирует шестизначные пароли. Пусть пароль будет состоять из чередующихся цифр и строчных
 букв латинского алфавита (без специальных символов). Например, k5p6m2. Выведи сгенерированный пароль в консоль.
