@@ -1,14 +1,38 @@
 package Lesson_7
-
+import kotlin.random.Random
 fun main() {
 
-fun generateCode(): Int {}
-    генерируем код для смс из 4 цифр
+    fun generateCode(length: Int = 4): {
+        val digits = 1000..9999
+        for (i in 1..length) {
+            digits[Random.nextInt(letters.length)]
+
+        }
+    }
+
+        /*
+        val code = (1..length)
+            .map { Random.nextInt(0, 10).toString() } // Генерируем случайную цифру от 0 до 9 и преобразуем в строку
+            .joinToString("") // Соединяем все сгенерированные строки в одну
+
+        for (i in 1..length) {
+            digits[Random.nextInt(digits.length)]
+
+        }
+
+        println("Ваш код авторизации: $digits")
+        println("Введите код авторизации: ")
+        val code = readLine()!!
+
+
+    }
+}
+    /* генерируем код для смс из 4 цифр
     выводим его в консоль Ваш код авторизации
     Далее программа запрашивает ввод в консоль чтобы авторизоватся
             если не верно - программа вышлет новый (отобразит в консоли) и снова будет запрашивать его ввод для попытки
     авторизации. Если код введен верно – программа отображает приветствие и завершает работу.
-
+*/
 }
 /*
 Задача 2 к Уроку 7
